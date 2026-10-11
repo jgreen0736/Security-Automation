@@ -28,6 +28,16 @@ python3 port_scanner.py 127.0.0.1 20 25
 
 These exercises are for authorized, educational testing only.
 
+## Email and Slack alerts
+
+Run both alert paths offline with mocked SMTP and Slack transports:
+
+```bash
+python3 alert_demo.py --mock
+```
+
+The mock run validates each alert's payload and reports simulated success without contacting either service. To send real alerts, replace the placeholders in `.env` with your own values and run `python3 alert_demo.py --send`. Do not commit `.env`; it is excluded by `.gitignore`.
+
 ## Findings
 
 See [`docs/findings/`](docs/findings/) for the dated exercise notes.
